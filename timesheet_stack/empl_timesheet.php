@@ -32,7 +32,7 @@
                         Month: Feb 22
                     </div>
                     <div class="name">
-                        Name: Stephen Heihoff
+                        Name: Mad Max
                     </div>
                 </div>
             </div>
