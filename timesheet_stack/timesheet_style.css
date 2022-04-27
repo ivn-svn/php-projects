@@ -1,0 +1,184 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+div {
+  line-height: 0px;
+}
+
+/* @page {
+  size: 21cm 29.7cm;
+  margin: 30mm 45mm 30mm 45mm;
+}
+
+@media print {
+body{
+  line-height: 0px;
+  width: 21cm;
+  height: 29.7cm;
+  margin: 30mm 45mm 30mm 45mm; 
+  background:#f1f2f2;
+ } 
+} */
+
+.thetable, .company_header, dnplaceholder {
+    border: 1px solid #323232;
+    border-radius: 1px 1px 1px 1px;
+}
+
+.companyname, .timesheet, .dnplaceholder { 
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+}
+
+.l {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "company_header company_header company_header"
+        "thetable thetable thetable"
+        "signaturearea signaturearea signaturearea";
+}
+
+.company_header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". companyname ."
+        ". timesheet ."
+        "dnplaceholder dnplaceholder .";
+    grid-area: company_header;
+}
+
+.companyname {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". . ."
+        ". . ."
+        "companyname companyname companyname";
+    grid-area: companyname;
+}
+
+.companyname {
+    grid-area: companyname;
+}
+
+.timesheet { grid-area: timesheet; }
+
+.dnplaceholder {  
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows:1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". date ."
+    ". name ."
+    ". . .";
+  grid-area: dnplaceholder;
+}
+
+.name { 
+  grid-area: name;
+}
+.date { 
+  grid-area: date;
+}
+
+
+.thetable { 
+  grid-area: thetable; 
+  overflow: auto;
+  padding: 10%;
+}
+
+table {
+  width: inherit;
+}
+
+.signaturearea {  
+  display: grid;
+  grid-template-columns:0.5fr 0.8fr 1fr;
+  grid-template-rows:0.2fr 0.2fr 0.2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". employeesignature ."
+    ". . .";
+  grid-area: signaturearea;
+}
+
+.employeesignature { 
+  grid-area: employeesignature; 
+  display: inline-block;
+}
+/* 
+CUSTOM CSS TABLE 
+ref link: https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l
+*/
+.thetable {
+  border-collapse: collapse;
+  font-size: 100%;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.thetable thead tr {
+  background-color: #b9b9b9;
+  color: #ffffff;
+  border-bottom: 1px solid #b1b1b1;
+  border-left: 1px solid #b1b1b1;
+  border-right: 1px solid #b1b1b1;
+}
+
+.thetable th,
+.thetable td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #b1b1b1;
+    border-left: 1px solid #b1b1b1;
+    border-right: 1px solid #b1b1b1;
+}
+
+.thetable tbody tr {
+  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #b1b1b1;
+  border-left: 1px solid #b1b1b1;
+  border-right: 1px solid #b1b1b1;
+}
+
+.thetable tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #b1b1b1;
+  border-left: 1px solid #b1b1b1;
+  border-right: 1px solid #b1b1b1;
+}
+
+.thetable tbody tr:last-of-type {
+  border-bottom: 1px solid #b1b1b1;
+  border-left: 1px solid #b1b1b1;
+  border-right: 1px solid #b1b1b1;
+}
+
+/*.sum { 
+  color: #009879;
+}
+*/
+
+#jumbotron {
+  padding: 4em;
+  margin: 4em;
+  box-shadow: 1px #b1b1b1;
+  box-shadow: rgb(161, 161, 161) 5px 5px 15px 10px;
+}
