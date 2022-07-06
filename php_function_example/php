@@ -1,0 +1,6 @@
+      if (array_key_exists($dayToCover, $dailyTotalsAggregatedPerMonth)) {
+          $dailyTotalsAggregatedPerMonth[$dayToCover] += floatval($hoursSum);
+      }
+      else {
+          $dailyTotalsAggregatedPerMonth[$dayToCover] = floatval($hoursSum);
+      }
